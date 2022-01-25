@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root{
+    /* veriables */
+    --font-reg: 'Poppins', sans-serif;
+    --padding-left-right: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-reg);
+}
+
+body{
+    /* background: #ff5252; */
+    background-image: url('assets/background.jpg');
+    background-repeat: no-repeat;
+}
+
+
+
+.img{
+    visibility: hidden;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.text{
+    opacity: 0;
+    font-weight: bolder;
+    font-size: 36px;
+    position: fixed;
+    top: 40%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-right: var(--padding-left-right);
+    padding-left: var(--padding-left-right);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    animation: showUpText 1s forwards;
+
+}
+
+.learn-more-btn{
+    opacity: 0;
+    position: fixed;
+    top: 80%;
+    right: 60%;
+    font-size: 16px;
+    transform: translate(50%,-50%);
+    border: none;
+    border-radius: 10px;
+    height: 6rem;
+    width: 15rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    transition: ease 0.5s;
+    animation: showUpBtn 1s 1s forwards;
+    color: black;
+}
+
+.learn-more-btn:hover{
+    font-weight: bold;
+    box-shadow: 0px 0px 20px 5px white;
+    transition: ease 0.5s;
+}
+
+.live-data-btn{
+    opacity: 0;
+    position: fixed;
+    top: 80%;
+    right: 40%;
+    font-size: 16px;
+    transform: translate(50%,-50%);
+    border: none;
+    border-radius: 10px;
+    height: 6rem;
+    width: 15rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    transition: ease 0.5s;
+    animation: showUpBtn 1s 1s forwards;
+    color: black;
+}
+
+.live-data-btn:hover{
+    font-weight: bold;
+    box-shadow: 0px 0px 20px 5px white;
+    transition: ease 0.5s;
+}
+
+/* .text-btn2{
+    padding-bottom: 1em;
+} */
+
+@keyframes showUpText{
+    to{
+        top: 30%;
+        opacity: 1;
+    }
+}
+
+@keyframes showUpBtn{
+    to{
+        top: 70%;
+        opacity: 1;
+    }
+}
+
+.animBtn{
+    animation: fadeDownBtn 1s 1s forwards;
+}
+
+.animText{
+    animation: fadeDownText 1s 1s forwards;
+}
+
+@keyframes fadeDownBtn{
+    to {
+        top: 80%;
+        opacity: 0;
+    }
+}
+@keyframes fadeDownText{
+    to {
+        top: 60%;
+        opacity: 0;
+    }
+}
+
+@media (max-width:370px) {
+    .text{
+        font-size: 30px;
+    }
+    .learn-more-btn{
+        right: 50%;
+    }
+    .live-data-btn{
+        right: 50%;
+        margin-top: 40%;
+    }
+}
+
+@media (max-width: 450px) {
+    .learn-more-btn{
+        right: 50%;
+    }
+    .live-data-btn{
+        right: 50%;
+        margin-top: 30%;
+    }
+}
+
+@media (max-width: 920px) {
+    body{
+        background-repeat: repeat;
+    }
+    .learn-more-btn{
+        right: 50%;
+    }
+    .live-data-btn{
+        right: 50%;
+        margin-top: 20%;
+    }
+}
+
+@media (max-width:540px) {
+    .learn-more-btn{
+        height: 4rem;
+        width: 10rem;
+    }
+    .live-data-btn{
+        height: 4rem;
+        width: 10rem;
+    }
+}
